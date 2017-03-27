@@ -56,6 +56,27 @@ body {
 }
 
 
+.blackquote {
+  font-family: $g;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-size: 26px;
+  padding: 95px 0;
+
+  &--pink {
+    background-color: $pink;
+  }
+  &--blue {
+    background-color: $blue;
+  }
+}
+
+
 // lAYOUT
 // ---------------------------
 .wrapper {
