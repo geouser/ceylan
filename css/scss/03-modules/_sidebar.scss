@@ -63,6 +63,7 @@
 .navigation-block {
     @include flex();
     position: fixed;
+    z-index: 99;
     width: 100%;
     height: 100%;
     padding-right: 90px;
