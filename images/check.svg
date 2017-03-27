@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02.Menu" transform="translate(-1867.000000, -874.000000)" fill="#FF8B8A">
+            <g id="check" transform="translate(1867.000000, 874.000000)">
+                <path d="M0.184615385,6.6 C0.0615384615,6.48 0,6.3 0,6.18 C0,6.06 0.0615384615,5.88 0.184615385,5.76 L1.04615385,4.92 C1.29230769,4.68 1.66153846,4.68 1.90769231,4.92 L1.96923077,4.98 L5.35384615,8.52 C5.47692308,8.64 5.66153846,8.64 5.78461538,8.52 L14.0307692,0.18 L14.0923077,0.18 L14.0923077,0.18 C14.3384615,-0.06 14.7076923,-0.06 14.9538462,0.18 L15.8153846,1.02 C16.0615385,1.26 16.0615385,1.62 15.8153846,1.86 L15.8153846,1.86 L5.96923077,11.82 C5.84615385,11.94 5.72307692,12 5.53846154,12 C5.35384615,12 5.23076923,11.94 5.10769231,11.82 L0.307692308,6.78 L0.184615385,6.6 L0.184615385,6.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

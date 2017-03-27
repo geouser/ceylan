@@ -74,9 +74,9 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   MENU TOGGLE
     ---------------------------*/
-    $('.menu-button').on('click', function(event) {
+    $('#menu-toggle').on('click', function(event) {
         event.preventDefault();
-        $(this).toggleClass('active');
+        $(this).toggleClass('open');
         $(this).siblings('header').toggleClass('active');
         if ($('header').hasClass('active')) {
                 $('body').css('overflow', 'hidden');
