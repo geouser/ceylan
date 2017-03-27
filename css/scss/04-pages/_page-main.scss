@@ -1,5 +1,56 @@
 
 
+
+/* main-services section*/
+.main-services {
+    .flex-row {
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        margin: 0;
+    }
+
+    .service-column {
+        padding: 90px 80px;
+        text-align: center;
+        border-bottom: 1px solid #DDDDDD;
+
+        @media (max-width: 1800px) {
+            padding: 60px 40px;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid #DDDDDD;
+        }
+
+        .image {
+            margin: 0 0 42px;
+
+            @media (max-width: 1800px) {
+                margin-bottom: 20px;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                height: 70px;
+            }
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: 500;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+        }
+
+
+    }
+}
+
+
+
+
 /* products-slider section*/
 .products-slider {
     padding-top: 80px;
