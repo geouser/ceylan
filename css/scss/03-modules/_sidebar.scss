@@ -6,6 +6,8 @@
     width: 90px;
     z-index: 100;
     background-color: #FFF;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+            box-shadow: 0 0 20px rgba(0,0,0,.2);
 }
 .logo {
     width: 100%;
@@ -22,4 +24,179 @@
     text-align: center;
     border-top: 1px solid #EEE;
     border-bottom: 1px solid #EEE;
+}
+.languages {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #EEE;
+    li {
+        display: none;
+        a {
+            color: $pink;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        &.active {
+            display: block;
+            text-align: center;
+        }
+        &:after {
+            margin: 10px auto 0;
+            content: "";
+            display: block;
+            height: 10px;
+            width: 16px;
+            background-image: url("../images/check.svg");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+        }
+    }
+}
+
+
+.navigation-block {
+    @include flex();
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-right: 90px;
+    background-color: #FFF;
+    -webkit-transition: opacity .4s, transform .4s;
+       -moz-transition: opacity .4s, transform .4s;
+        -ms-transition: opacity .4s, transform .4s;
+         -o-transition: opacity .4s, transform .4s;
+            transition: opacity .4s, transform .4s;
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+       -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+         -o-transform: translateX(-100%);
+            transform: translateX(-100%);
+    &.open {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+           -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+             -o-transform: translateX(0);
+                transform: translateX(0);
+    }
+    &__img {
+        width: 27%;
+        height: 100%;
+        background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+    }
+    &__info {
+        @include flex($direction: column, $alignI: flex-start);
+        width: 73%;
+        height: 100%;
+        padding: 45px 70px 45px 70px;
+        &__footer {
+            width: 100%;
+            font-size: 12px;
+            font-weight: 500;
+            color: #C7C7C7;
+            text-transform: uppercase;
+            @include flex();
+            a {
+                color: #565656;
+            }
+        }
+    }
+}
+
+.page-menu {
+    width: 100%;
+    > ul {
+        @include flex($alignI: stretch);
+        width: 100%;
+        list-style-type: none;
+        border: 1px solid #eee;
+        border-bottom: none;
+        > li {
+            width: 33.3332%;
+            min-height: 215px;
+            padding: 5% 10%;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+            position: relative;
+            &:nth-of-type(3n) {
+                border-right: none;
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    -webkit-border-radius: 50%;
+                            border-radius: 50%;
+                    border: 2px solid #fff;
+                    position: absolute;
+                    bottom: -7px;
+                    right: -7.5px;
+                    background: #eee;
+                    -webkit-box-shadow: 0 0 1px #eee;
+                            box-shadow: 0 0 1px #eee;
+                }
+            }
+            > a {
+                color: #2d2d2d;
+                font-size: 26px;
+                font-weight: 500;
+                display: block;
+                margin-bottom: 20px;
+                @include transition(all, .2s);
+                &:hover {
+                    color: $pink;
+                }
+            }
+            &.active{
+                > a {
+                    color: $pink;
+                }
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    display: block;
+                    margin-bottom: 4px;
+                    a {
+                        display: block;
+                        font-size: 15px;
+                        color: $text;
+                        &:hover {
+                            color: $pink;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
+
+.socials {
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
 }
