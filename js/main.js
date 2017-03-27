@@ -74,6 +74,18 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Sliders
+    ---------------------------*/
+    $('.products-logos').slick({
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        slidesToShow: 7,
+        slidesToScroll: 1
+    });
+
+
 
     /*----------------------------
                               SEND FORM

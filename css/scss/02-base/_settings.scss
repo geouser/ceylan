@@ -9,8 +9,73 @@ body {
 body {
   font-family: $gp;
   font-size: 15px;
+  line-height: 22px;
   color: $text;
+  padding-right: 90px;
+  background-color: #F9F9F9;
 }
+
+
+.list {
+  display: block;
+  font-weight: 500;
+  font-style: italic;
+
+  li {
+    list-style: none;
+    padding-left: 25px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+
+    &:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      background-position: 50% 50%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 11px;
+      left: 0;
+      margin-top: -10px;
+    }
+  }
+
+  &--green li:before {
+    background-image: url(../images/list-green.svg);
+  }
+  &--blue li:before {
+    background-image: url(../images/list-blue.svg);
+  }
+  &--pink li:before {
+    background-image: url(../images/list-pink.svg);
+  }
+}
+
+
+.blackquote {
+  font-family: $g;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-size: 26px;
+  padding: 95px 0;
+
+  &--pink {
+    background-color: $pink;
+  }
+  &--blue {
+    background-color: $blue;
+  }
+}
+
 
 // lAYOUT
 // ---------------------------
