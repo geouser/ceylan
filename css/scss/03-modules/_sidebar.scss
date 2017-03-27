@@ -67,19 +67,17 @@
     height: 100%;
     padding-right: 90px;
     background-color: #FFF;
-    -webkit-transition: opacity .4s, transform .4s;
-       -moz-transition: opacity .4s, transform .4s;
-        -ms-transition: opacity .4s, transform .4s;
-         -o-transition: opacity .4s, transform .4s;
-            transition: opacity .4s, transform .4s;
-    opacity: 0;
+    -webkit-transition: opacity .0s, transform .6s;
+       -moz-transition: opacity .0s, transform .6s;
+        -ms-transition: opacity .0s, transform .6s;
+         -o-transition: opacity .0s, transform .6s;
+            transition: opacity .0s, transform .6s;
     -webkit-transform: translateX(-100%);
        -moz-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
          -o-transform: translateX(-100%);
             transform: translateX(-100%);
     &.open {
-        opacity: 1;
         -webkit-transform: translateX(0);
            -moz-transform: translateX(0);
             -ms-transform: translateX(0);
