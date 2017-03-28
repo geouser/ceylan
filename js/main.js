@@ -56,12 +56,29 @@ jQuery(document).ready(function($) {
     $('#menu-toggle').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('open');
+        $('#search').removeClass('open');
         $('#menu').toggleClass('open');
         if ($('#menu').hasClass('active')) {
                 $('body').css('overflow', 'hidden');
             } else {
                 $('body').css('overflow', 'visible');
             }
+    });
+
+    $('#seacrh-toggle a').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('open');
+        $('#menu').removeClass('open');
+        $('#search').toggleClass('open');
+        $('#serch-input').focus();
+        var val = $('#serch-input').val();
+        $('#serch-input').val('');
+        $('#serch-input').val(val);
+        if ($('#menu').hasClass('active')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'visible');
+        }
     });
 
 
@@ -85,7 +102,36 @@ jQuery(document).ready(function($) {
         slidesToScroll: 1
     });
 
+    $('.offer__slider').slick({
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
 
+    $('.slider-nav').slick({
+        slidesToShow: 6,
+          slidesToScroll: 1,
+          asNavFor: '.offer__slider',
+          dots: false,
+          arrows: true,
+          focusOnSelect: true,
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 400,
+              settings: {
+                slidesToShow: 2,
+              }
+            }
+          ]
+    });
 
     /*----------------------------
                               SEND FORM
