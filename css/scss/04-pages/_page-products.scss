@@ -175,6 +175,20 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
     }
+
+    .product-link {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+        -o-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+        text-transform: uppercase;
+        color: #49acd6;
+        text-decoration: underline;
+        z-index: 4;
+    }
 }
 
 .product-main-slider {
@@ -210,6 +224,7 @@
 
 .product-thumbnails-slider {
     position: absolute;
+    z-index: 3;
     top: 0;
     left: -220px;
     width: 220px;
