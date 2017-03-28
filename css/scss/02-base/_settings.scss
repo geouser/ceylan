@@ -15,6 +15,26 @@ body {
   background-color: #F9F9F9;
 }
 
+h1 {
+  font-size: 80px;
+  font-weight: 500;
+  color: #FFF;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  width: 100%;
+  line-height: normal;
+  padding-bottom: 20px;
+  & + button {
+    margin-top: 45px;
+  }
+}
+
+.subtitle {
+  margin-top: 40px;
+  color: #FFF;
+  font-size: 17px;
+  width: 600px;
+  max-width: 100%;
+}
 
 .list {
   display: block;
