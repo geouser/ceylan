@@ -110,6 +110,28 @@
             }
         }
     }
+    &--search {
+        .navigation-block__info {
+            -webkit-justify-content: center;
+                    justify-content: center;
+        }
+        input {
+            font-size: 80px;
+            font-weight: 500;
+            color: #565656;
+            text-transform: uppercase;
+            padding-bottom: 45px;
+            border: none;
+            border-bottom: 1px solid #EEE;
+            width: 100%;
+            background: transparent;
+            margin-bottom: 40px;
+        }
+        span {
+            color: $pink;
+            font-size: 15px;
+        }
+    }
 }
 
 .page-menu {
