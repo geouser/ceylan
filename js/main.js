@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         $(this).toggleClass('open');
         $('#search').removeClass('open');
-
+        
         $('#menu').toggleClass('open');
 
         if ($('#menu').hasClass('active')) {
@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
     $('#seacrh-toggle a').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('open');
-        
+
         $('#menu').removeClass('open');
         $('#menu-toggle').removeClass('open');
         $('#search').toggleClass('open');
