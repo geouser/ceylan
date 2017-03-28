@@ -1,16 +1,24 @@
 .offer {
     height: 460px;
     position: relative;
-    padding-left: 90px;
+    padding-left: 70px;
     &--slider {
         height: 100%;
         max-height: 1000px;
     }
-
+    
     background-position: 50% 50%;
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    
+    .wrapper {
+        @include flex($direction: column, $alignI: flex-start, $justify: center);
+        text-align: left;
+        height: 100%;
+        width: 100%;
+        padding: 0 70px 0 0;
+    }
     
     &__info {
         position: relative;
@@ -23,6 +31,7 @@
         font-size: 17px;
         color: #2d2d2d;
         font-family: $gp;
+        margin-left: 20px;
         @include flex($direction: column, $alignI: center, $justify: space-between);
         &__text {
             padding: 0 55px;
@@ -43,6 +52,9 @@
         }
         .logo {
             padding-left: 55px;
+            img {
+                width: 220px;
+            }
         }
         hr {
             border: none;
@@ -79,25 +91,6 @@
     }
 }
 
-.logo {
-    &--text {
-        h1 {
-            font-family: $gp;
-            font-size: 56px;
-            color: $blue;
-            font-weight: 400;
-            span {
-                display: block;
-                color: #b8b8b8;
-                font-size: 11px;
-                font-family: $gp;
-                padding-left: 70px;
-                text-transform: uppercase;
-                margin-top: 6px;
-            }
-        }
-    }
-}
 
 .slider-nav {
     width: 100%;
