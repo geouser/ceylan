@@ -98,6 +98,18 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  Scroll
+    ---------------------------*/
+    if ( exist('.scroll') ) {
+        $('.scroll').mCustomScrollbar({
+            axis:"y",
+            theme: 'dark-thick'
+        });
+    } 
+
+
+
+    /*---------------------------
                                   Sliders
     ---------------------------*/
     $('.products-logos').slick({

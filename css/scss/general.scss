@@ -6,6 +6,7 @@
 @import '01-tools/slick-theme';
 @import '01-tools/font-awesome';
 @import '01-tools/fancybox';
+@import '01-tools/scroll';
 
 /*Base styles*/
 @import '02-base/mixins';
@@ -26,3 +27,4 @@
 /*Pages styles*/
 @import '04-pages/page-main';
 @import '04-pages/page-products';
+@import '04-pages/page-history';

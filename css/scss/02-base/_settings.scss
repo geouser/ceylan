@@ -103,6 +103,18 @@ h1 {
 	text-align: center;
 }
 
+section.inner {
+  padding: 70px 60px;
+
+  @media (max-width: 1700px) {
+    padding: 50px;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 30px;
+  }
+}
+
 
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);
