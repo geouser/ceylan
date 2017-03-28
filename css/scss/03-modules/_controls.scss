@@ -41,6 +41,10 @@
         height: 50px;
         line-height: 50px;
     }
+    &.active,
+    &:hover {
+        background: rgba(0,0,0,.5);
+    }
 }
 
 /* ------------------------------------ */
