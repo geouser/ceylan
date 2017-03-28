@@ -1,0 +1,116 @@
+.products {
+    .flex-row {
+        margin: 0;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+}
+
+.product-preview {
+    width: 20%;
+    padding-bottom: 80px;
+    padding-top: 150px;
+    border: 1px solid #DEDEDE;
+    position: relative;
+    text-align: center;
+    color: $text;
+    background-color: transparent;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+        border-color: transparent;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+        z-index: 2;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+        margin: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+    }
+
+    &:hover &__logo {
+        top: 75px;
+    }
+
+    &__text {
+        padding: 0 35px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(25%);
+        -ms-transform: translateY(25%);
+        -o-transform: translateY(25%);
+        transform: translateY(25%);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        @media (max-width: 1700px) {
+            padding: 0 15px;
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
+
+    &:hover &__text {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .more {
+        position: absolute;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        bottom: 30px;
+        margin-bottom: -60px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &:hover .more {
+        opacity: 1;
+        visibility: visible;
+        margin-bottom: 0;
+    }
+}
