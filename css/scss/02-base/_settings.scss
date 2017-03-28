@@ -105,6 +105,10 @@ h1 {
 	text-align: center;
 }
 
+section.inner {
+  padding: 70px 60px;
+}
+
 
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);
