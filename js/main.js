@@ -88,6 +88,14 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.tabs-nav a').click(function(e){
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $('.tabs-nav a').removeClass('active');
+        $(this).addClass('active');
+        $('.tab').hide();
+        $(target).fadeIn('slow');
+    });
 
     /*---------------------------
                                   Fancybox
