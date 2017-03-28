@@ -103,6 +103,20 @@ article {
         z-index: 1;
     }
 
+    @media (max-width: 1700px) {
+        &:after,
+        &:before {
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 1500px) {
+        &:after,
+        &:before {
+            height: 30px;
+        }
+    }
+
     .mCSB_scrollTools {
         z-index: 3;
         width: 7px;
@@ -123,6 +137,14 @@ article {
     .mCSB_container {
         padding: 40px 100px 50px 40px;
         margin: 0;
+
+        @media (max-width: 1700px) {
+            padding: 40px;
+        }
+
+        @media (max-width: 1500px) {
+            padding: 30px;
+        }
     }
 
 }
