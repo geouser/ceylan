@@ -105,6 +105,14 @@ h1 {
 
 section.inner {
   padding: 70px 60px;
+
+  @media (max-width: 1700px) {
+    padding: 50px;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 30px;
+  }
 }
 
 
