@@ -54,7 +54,7 @@
         color: #2d2d2d;
         font-family: $gp;
         margin-left: 20px;
-        @include flex($direction: column, $alignI: center, $justify: space-between, $wrap: nowrap);
+        @include flex($direction: column, $alignI: flex-start, $justify: space-between, $wrap: nowrap);
         @media (max-width: 1500px) {
             padding-top: 30px;
             font-size: 15px;
