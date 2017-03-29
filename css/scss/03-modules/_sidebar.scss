@@ -49,6 +49,7 @@
         display: block;
         img {
             width: 100%;
+            max-width: 28px;
         }
     }
     @media (max-width: 1000px) {
