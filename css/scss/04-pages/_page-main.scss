@@ -126,6 +126,14 @@
 .how-to {
     padding-top: 80px;
     overflow: hidden;
+
+    @media (max-width: 1200px) {
+        padding: 30px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+    }
     
 
     .flex-row {
@@ -152,6 +160,21 @@
 
         @media (max-width: 1500px) {
             padding: 40px 30px;
+        }
+
+        @media (max-width: 1200px) {
+            width: 50%;
+            border: 1px solid #EEEEEE;
+        }
+
+        @media (max-width: 1000px) {
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        @media (max-width: 920px) {
+            width: 100%;
+            padding: 30px 20px;
         }
 
         h3 {
@@ -182,6 +205,12 @@
 
             @media (max-width: 1700px) {
                 margin: 30px auto;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            &.image-column {
+                display: none;
             }
         }
     }
