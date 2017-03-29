@@ -6,14 +6,18 @@
         margin-bottom: 16px;
     a {
         display: block;
-        height: 90px;
+        height: 87px;
         border-bottom: 1px solid #EEE;
         @include flex($justify:flex-start);
         padding: 0 30px;
         position: relative;
         cursor: pointer;
+         @media (max-width: 1700px) {
+             height: 63px;
+         }
         @media (max-width: 1500px) {
             padding: 0 25px;
+            height: 53px;
         }
         @media (max-width: 1300px) {
             padding: 0 15px;
@@ -47,7 +51,7 @@
                 }
             }
             @media (max-width: 1500px) {
-                width: 40px;
+                width: 25px;
             }
             @media (max-width: 1300px) {
                 width: 25px;
