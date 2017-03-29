@@ -21,8 +21,7 @@
     <body>
 
 
-       
-        <!--=================================================================================================-->
+               <!--=================================================================================================-->
                                                     <!-- SIDEBAR -->
         <aside class="sidebar compensate-for-scrollbar">
             <a href="index.html" class="logo"><img src="images/logo.svg" alt=""></a>
@@ -32,7 +31,7 @@
               <span></span>
               <span></span>
             </div>
-            <div class="search">
+            <div class="search" id="seacrh-toggle">
                 <a href="#"><img src="images/search.svg" alt=""></a>
             </div>
             <ul class="languages">
@@ -51,18 +50,18 @@
                 </div>
                 <nav class="page-menu">
                     <ul>
-                        <li class="active"><a href="">О компании</a>
+                        <li><a href="company.html">О компании</a>
                             <ul>
                                 <li><a href="">Пять принципов</a></li>
-                                <li><a href="">История</a></li>
+                                <li class="active"><a href="history.html">История</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Услуги</a>
+                        <li><a href="services.html">Услуги</a>
                             <ul>
                                 <li><a href="">Спектр услуг</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Продукция</a></li>
+                        <li><a href="products.html">Продукция</a></li>
                         <li><a href="">Партнеры</a></li>
                         <li><a href="">Пресс-центр</a></li>
                         <li><a href="">Контакты</a></li>
@@ -72,6 +71,14 @@
                     <p>© 2017 CEYLAN MMC. Все права защищены</p>
                     <p class="powered">website by: <a href="">gamidov studio</a></p>
                 </div>
+            </div>
+        </aside>
+
+        <aside id="search" class="navigation-block navigation-block--search">
+            <div class="navigation-block__img" style="background-image: url('images/search-bg.jpg')"></div>
+            <div class="navigation-block__info">
+                <input type="text" name="name" value="Услуги компании" id="serch-input">
+                <span>Для поиска нажмите на "Enter"</span>
             </div>
         </aside>
 
