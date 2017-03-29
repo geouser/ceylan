@@ -16,6 +16,25 @@
             @media (max-width: 1700px) {
                 padding: 0 15px;
             }
+
+            @media (max-width: 1000px) {
+                width: 100%;
+            }
+        }
+        .content {
+            @media (max-width: 1000px) {
+                -webkit-order: 1;
+                -ms-flex-order: 1;
+                order: 1;
+            }
+        }
+        .aside {
+            @media (max-width: 1000px) {
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                margin-bottom: 30px;
+            }
         }
     }    
 }
@@ -29,6 +48,10 @@ article {
 
     @media (max-width: 1500px) {
         font-size: 15px;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 14px;
     }
 
     p,
@@ -71,6 +94,15 @@ article {
 
     @media (max-width: 1500px) {
         height: 450px;
+    }
+
+    @media (max-width: 1000px) {
+        height: auto;
+        padding: 30px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
     }
 
     hr {
@@ -117,6 +149,13 @@ article {
         }
     }
 
+    @media (max-width: 1000px) {
+        &:after,
+        &:before {
+            display: none;
+        }
+    }
+
     .mCSB_scrollTools {
         z-index: 3;
         width: 7px;
@@ -145,6 +184,10 @@ article {
         @media (max-width: 1500px) {
             padding: 30px;
         }
+
+        @media (max-width: 600px) {
+            padding: 15px;
+        }
     }
 
 }
@@ -152,6 +195,17 @@ article {
 
 .fact {
     @include flex($alignI: center);
+
+    @media (max-width: 1000px) {
+        display: block;
+        text-align: center;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
     .icon {
         width: 90px;
@@ -165,6 +219,11 @@ article {
 
         @media (max-width: 1500px) {
             width: 65px;
+        }
+
+        @media (max-width: 1000px) {
+            display: block;
+            margin: 0 auto 15px;
         }
 
         img {
@@ -190,6 +249,10 @@ article {
             width: -webkit-calc(100% - 75px);
             width: calc(100% - 75px);
         }
+
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
     }
 }
 
@@ -205,5 +268,9 @@ article {
     height: 100%;
     &--small {
         height: 170px;
+    }
+
+    @media (max-width: 1000px) {
+        display: none;
     }
 }

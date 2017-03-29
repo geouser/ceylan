@@ -22,7 +22,24 @@ function exist(el){
     }
 }
 
+/*---------------------------
+                              Scroll
+---------------------------*/
+if ( exist('.scroll') ) {
+    $(window).on('load resize', function(event) {
+        event.preventDefault();
+        if ( $(window).width() <= 1000 ) {
+            $('.scroll').mCustomScrollbar('destroy');
+        } else {
+            $('.scroll').mCustomScrollbar({
+                axis:"y",
+                theme: 'dark-thick'
+            });
+        }
+    });
+} 
 
+    
 jQuery(document).ready(function($) {
 
     /*---------------------------
@@ -105,15 +122,9 @@ jQuery(document).ready(function($) {
     });
 
 
-    /*---------------------------
-                                  Scroll
-    ---------------------------*/
-    if ( exist('.scroll') ) {
-        $('.scroll').mCustomScrollbar({
-            axis:"y",
-            theme: 'dark-thick'
-        });
-    } 
+
+
+
 
 
 
