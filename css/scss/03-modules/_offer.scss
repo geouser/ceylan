@@ -19,6 +19,11 @@
     }
     &__controls {
         margin-top: 45px;
+        @media (max-width: 1000px) {
+            .button {
+                margin: 10px;
+            }
+        }
     }
     
     background-position: 50% 50%;

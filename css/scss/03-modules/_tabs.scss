@@ -102,10 +102,22 @@
         -webkit-background-position: 50% 50%;
              -o-background-position: 50% 50%;
                 background-position: 50% 50%;
-        font-size: 15px;
+        font-size: 15px !important;
         font-style: italic;
         font-weight: 400;
         color: #9A9A9A;
+        p {
+            font-size: 15px;
+        }
+        @media (max-width: 1700px) {
+            padding: 20px 10px;
+        }
+        @media (max-width: 1500px) {
+            padding: 10px;
+            p {
+                font-size: 14px;
+            }
+        }
         i {
             display: block;
             margin: 0 auto 14px;
