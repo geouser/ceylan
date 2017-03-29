@@ -161,7 +161,7 @@ jQuery(document).ready(function($) {
         dots: false,
         autoplay: true,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
     });
 
     $('.slider-nav').slick({
@@ -189,7 +189,7 @@ jQuery(document).ready(function($) {
 
 
     $('.product-main-slider').slick({
-        arrows: false,
+        arrows: true,
         dots: false,
         fade: true,
         asNavFor: '.product-thumbnails-slider'
