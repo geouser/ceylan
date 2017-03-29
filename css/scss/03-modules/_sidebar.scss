@@ -82,6 +82,7 @@
          bottom: 0;
          top: 0;
          margin: auto;
+         border: none;
      }
     @media (max-width: 700px) {
         right: 50px;
@@ -144,6 +145,7 @@
     }
     @media (max-width: 1000px) {
         padding-right: 0;
+        height: calc(100% - 60px);
     }
     &.open {
         -webkit-transform: translateX(0);
@@ -164,10 +166,11 @@
         }
     }
     &__info {
-        @include flex($direction: column, $alignI: flex-start);
+        @include flex($direction: column, $alignI: flex-start, $wrap: nowrap);
         width: 73%;
         height: 100%;
         padding: 45px 70px 45px 70px;
+        overflow: scroll;
         &__footer {
             width: 100%;
             font-size: 12px;
@@ -178,6 +181,12 @@
             a {
                 color: #565656;
             }
+            @media (max-width: 600px) {
+                font-size: 10px;
+            }
+            @media (max-width: 400px) {
+                font-size: 8px;
+            }
         }
         @media (max-width: 1300px) {
             padding: 40px;
@@ -185,6 +194,9 @@
          @media (max-width: 1000px) {
              width: 100%;
          }
+        @media (max-width: 760px) {
+            padding: 20px 10px;
+        }
     }
     &--search {
         .navigation-block__info {
@@ -233,6 +245,15 @@
                 padding: 5%;
                 min-height: 160px;
             }
+            @media (max-width: 600px) {
+                min-height: 120px;
+                padding: 5% 10px;
+                text-align: center;
+            }
+            @media (max-width: 400px) {
+                padding: 5% 4px;
+                min-height: 100px;
+            }
             &:nth-of-type(3n) {
                 border-right: none;
             }
@@ -264,6 +285,17 @@
                 &:hover {
                     color: $pink;
                 }
+                @media (max-width: 760px) {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 18px;
+                    margin-bottom: 4px;
+                }
+                @media (max-width: 400px) {
+                    font-size: 16px;
+                }
             }
             &.active{
                 > a {
@@ -275,12 +307,25 @@
                 li {
                     display: block;
                     margin-bottom: 4px;
+                    @media (max-width: 760px) {
+                        margin-bottom: 0;
+                    }
                     a {
                         display: block;
                         font-size: 15px;
                         color: $text;
                         &:hover {
                             color: $pink;
+                        }
+                        @media (max-width: 760px) {
+                            font-size: 14px;
+                        }
+                        @media (max-width: 600px) {
+                            font-size: 12px;
+                        }
+                        @media (max-width: 400px) {
+                            font-size: 11px;
+                            line-height: 1.4;
                         }
                     }
                 }
