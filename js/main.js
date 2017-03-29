@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
         
         $('#menu').toggleClass('open');
 
-        if ($('#menu').hasClass('active')) {
+        if ($('#menu').hasClass('open')) {
             $('body').css('overflow', 'hidden');
         } else {
             $('body').css('overflow', 'visible');
@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
         $('#serch-input').val('');
         $('#serch-input').val(val);
 
-        if ($('#menu').hasClass('active')) {
+        if ($('#search').hasClass('open')) {
             $('body').css('overflow', 'hidden');
         } else {
             $('body').css('overflow', 'visible');
