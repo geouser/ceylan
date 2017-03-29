@@ -5,6 +5,14 @@
         border-bottom: 1px solid #539EC5;
         padding: 60px 0;
 
+        @media (max-width: 1200px) {
+            padding: 40px 0;
+        }
+
+        @media (max-width: 800px) {
+            padding: 20px 0;
+        }
+
         a {
             display: block;
             margin: 0 auto;
@@ -13,6 +21,10 @@
             -webkit-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
+
+            @media (max-width: 800px) {
+                width: 150px;
+            }
 
             img {
                 display: block;
@@ -27,6 +39,14 @@
 
     &-bottom {
         padding: 60px 0 50px;
+
+        @media (max-width: 1200px) {
+            padding: 40px 0;
+        }
+
+        @media (max-width: 800px) {
+            padding: 40px 0 20px;
+        }
     }
 
     &-menu {
@@ -44,6 +64,15 @@
             margin: 0 18px;
             font-size: 15px;
 
+            @media (max-width: 800px) {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+
+            @media (max-width: 600px) {
+                margin: 5px;
+            }
+
             a {
                 text-transform: uppercase;
                 color: #fff;
@@ -54,6 +83,10 @@
     &-socials {
         text-align: center;
         margin-top: 60px;
+
+        @media (max-width: 1200px) {
+            margin-top: 40px;
+        }
 
         a {
             display: inline-block;
