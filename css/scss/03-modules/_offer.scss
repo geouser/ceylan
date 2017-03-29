@@ -4,6 +4,9 @@
     padding-left: 70px;
     @media (max-width: 1000px) {
         padding-left: 0;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     &--slider {
         height: 100%;
@@ -29,6 +32,9 @@
         height: 100%;
         width: 100%;
         padding: 0 70px 0 0;
+        @media (max-width: 1000px) {
+            padding: 0 15px;
+        }
     }
     
     &__info {
