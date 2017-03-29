@@ -23,6 +23,9 @@ body {
     padding-top: 60px;
     padding-right: 0;
   }
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 }
 
 h1 {

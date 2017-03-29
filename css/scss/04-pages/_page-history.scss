@@ -268,6 +268,9 @@ article {
     height: 100%;
     &--small {
         height: 170px;
+        @media (max-width: 1300px) {
+            height: 135px;
+        }
     }
 
     @media (max-width: 1000px) {
