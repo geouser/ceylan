@@ -125,8 +125,36 @@ jQuery(document).ready(function($) {
         dots: false,
         autoplay: true,
         slidesToShow: 7,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3
+                }
+            }
+        ]
     });
+
+
 
     $('.offer__slider').slick({
         arrows: false,
