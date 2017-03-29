@@ -125,8 +125,15 @@ jQuery(document).ready(function($) {
         dots: false,
         autoplay: true,
         slidesToShow: 7,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200
+            }
+        ]
     });
+
+
 
     $('.offer__slider').slick({
         arrows: false,

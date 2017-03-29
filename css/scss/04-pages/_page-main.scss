@@ -177,6 +177,10 @@
             padding: 30px 20px;
         }
 
+        @media (max-width: 600px) {
+            padding: 30px 15px;
+        }
+
         h3 {
             font-size: 26px;
             color: #2d2d2d;
@@ -186,6 +190,11 @@
 
             @media (max-width: 1700px) {
                 font-size: 24px;
+            }
+
+            @media (max-width: 1200px) {
+                font-size: 22px;
+                line-height: auto;
             }
         }
 
