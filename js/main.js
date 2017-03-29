@@ -128,7 +128,28 @@ jQuery(document).ready(function($) {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1200
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3
+                }
             }
         ]
     });
