@@ -13,6 +13,12 @@ body {
   color: $text;
   padding-right: 90px;
   background-color: #F9F9F9;
+  @media (max-width: 1500px) {
+    padding-right: 70px;
+  }
+  @media (max-width: 1000px) {
+    padding-top: 60px;
+  }
 }
 
 h1 {
