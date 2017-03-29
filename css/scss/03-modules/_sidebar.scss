@@ -152,6 +152,9 @@
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
     &__info {
         @include flex($direction: column, $alignI: flex-start);
