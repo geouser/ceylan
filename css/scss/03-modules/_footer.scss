@@ -21,7 +21,6 @@
             -webkit-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
-
             @media (max-width: 800px) {
                 width: 150px;
             }
@@ -76,6 +75,10 @@
             a {
                 text-transform: uppercase;
                 color: #fff;
+                            &:hover {
+                border-bottom: 1px solid #fff;
+            }
+
             }
         }
     }
