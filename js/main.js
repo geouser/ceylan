@@ -82,11 +82,6 @@ jQuery(document).ready(function($) {
         
         $('#menu').toggleClass('open');
 
-        if ($('#menu').hasClass('open')) {
-            $('body').css('overflow', 'hidden');
-        } else {
-            $('body').css('overflow', 'visible');
-        }
     });
 
     $('#seacrh-toggle a').on('click', function(event) {
@@ -102,11 +97,6 @@ jQuery(document).ready(function($) {
         $('#serch-input').val('');
         $('#serch-input').val(val);
 
-        if ($('#search').hasClass('open')) {
-            $('body').css('overflow', 'hidden');
-        } else {
-            $('body').css('overflow', 'visible');
-        }
     });
 
 

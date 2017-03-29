@@ -179,6 +179,10 @@
             @include flex();
             a {
                 color: #565656;
+                @include transition(all,.2s);
+                &:hover {
+                    color: $pink;
+                }
             }
             @media (max-width: 600px) {
                 font-size: 10px;
@@ -367,6 +371,14 @@
         height: 30px;
         width: 30px;
         margin-right: 10px;
+        -webkit-transition: all .2s;
+           -moz-transition: all .2s;
+            -ms-transition: all .2s;
+             -o-transition: all .2s;
+                transition: all .2s;
+        &:hover {
+            opacity: .6;
+        }
         &:last-of-type {
             margin-right: 0;
         }
