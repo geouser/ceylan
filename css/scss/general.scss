@@ -4,7 +4,7 @@
 @import '01-tools/fonts';
 @import '01-tools/slick';
 @import '01-tools/slick-theme';
-/*@import '01-tools/fancybox';*/
+@import '01-tools/fancybox';
 @import '01-tools/scroll';
 
 /*Base styles*/
@@ -29,3 +29,5 @@
 @import '04-pages/page-products';
 @import '04-pages/page-history';
 @import '04-pages/page-services';
+@import '04-pages/page-press-center';
+@import '04-pages/page-press-center-inner';

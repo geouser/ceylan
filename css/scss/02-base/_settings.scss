@@ -68,6 +68,20 @@ h1 {
   }
 }
 
+hr.devider {
+  margin: 0 60px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+
+  @media (max-width: 1700px) {
+    margin: 0 50px;
+  }
+
+  @media (max-width: 1500px) {
+    margin: 0 30px;
+  }
+}
+
 .list {
   display: block;
   font-weight: 500;
@@ -126,6 +140,11 @@ h1 {
   &--blue {
     background-color: $blue;
   }
+}
+
+
+.fncb-hide {
+  display: none;
 }
 
 

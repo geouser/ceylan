@@ -42,6 +42,31 @@
 article {
     font-size: 17px;
 
+    .article-title {
+        color: $blue;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        padding-right: 50%;
+        margin-bottom: 30px;
+
+        @media (max-width: 1000px) {
+            padding-right: 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 26px;
+        }
+    }
+
+    .article-date {
+        font-size: 15px;
+        font-weight: 500;
+        color: $blue;
+        margin-bottom: 20px;
+    }
+
     @media (max-width: 1700px) {
         font-size: 16px;
     }
