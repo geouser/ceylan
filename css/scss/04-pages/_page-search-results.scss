@@ -8,6 +8,10 @@
         line-height: 26px;
         margin-bottom: 30px;
 
+        @media (max-width: 600px) {
+            padding-bottom: 15px;
+        }
+
         strong {
             color: $blue;
             font-weight: inherit;
