@@ -1,6 +1,4 @@
-.user-area {
-    margin-top: 50px;
-    
+.user-area {   
     @media (min-width: 1501px) {
         .flex-row {
             margin: 0 -20px;
@@ -14,19 +12,10 @@
     @media (max-width: 700px) {
         .flex-row .col-6 {
             width: 100%;
-            margin: 15px 0;
+            margin: 0;
         }
     }
     
-
-    @media (max-width: 1700px) {
-        margin-top: 30px;
-    }
-
-    @media (max-width: 700px) {
-        margin-top: 15px;
-    }
-
     .user-block {
         background-color: #fff;
         -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);

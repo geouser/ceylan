@@ -11,9 +11,49 @@
     }
 
     .service-column {
-        padding: 90px 80px;
+        padding: 90px 60px;
         text-align: center;
         border-bottom: 1px solid #DDDDDD;
+        color: inherit;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            -webkit-transform: translate(-50%, 200%);
+            -ms-transform: translate(-50%, 200%);
+            -o-transform: translate(-50%, 200%);
+            transform: translate(-50%, 200%);
+            background-image: url(../images/read-more.svg);
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+            @media (max-width: 1800px) {
+                bottom: 30px;
+            }
+        }
+
+        &:hover:after {
+            -webkit-transform: translate(-50%, 50%);
+            -ms-transform: translate(-50%, 50%);
+            -o-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
         @media (max-width: 1800px) {
             padding: 60px 40px;
