@@ -160,6 +160,13 @@ article {
         z-index: 1;
     }
 
+    &.no-scroll {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
     @media (max-width: 1700px) {
         &:after,
         &:before {
@@ -212,6 +219,35 @@ article {
 
         @media (max-width: 600px) {
             padding: 15px;
+        }
+    }
+
+
+
+
+    .double-blocks {
+        height: 100%;
+        margin: 0;
+
+        .left-column {
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            @media (max-width: 1000px) {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        .right-column {
+            width: 50%;
+
+            @media (max-width: 1000px) {
+                width: 100%;
+            }
         }
     }
 

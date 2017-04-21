@@ -1,0 +1,221 @@
+.text-block {
+    .mCSB_container {
+        padding: 40px 30px;
+
+        @media (max-width: 1500px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &:before,
+    &:after {
+        height: 40px;
+    }
+    h3 {
+        font-size: 26px;
+        font-weight: 500;
+        color: #222;
+        margin-bottom: 30px;
+
+        @media (max-width: 1700px) and (min-width: 1501px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 1500px) and (min-width: 1001px) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 24px;
+
+        @media (max-width: 1700px) and (min-width: 1501px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        @media (max-width: 1500px) and (min-width: 1001px) {
+            font-size: 13px;
+            line-height: normal;
+        }
+    }
+
+    .list {
+        margin: 40px 0;
+
+        @media (max-width: 1700px) and (min-width: 1501px) {
+            margin: 30px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1500px) and (min-width: 1001px) {
+            margin: 15px 0;
+            font-size: 13px;
+            line-height: normal;
+
+            li:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__footer {
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+
+        @media (max-width: 1500px) and (min-width: 1001px) {
+            padding-top: 15px;
+        }
+    }
+}
+
+
+.contact-form {
+    padding: 20px 40px;
+    margin-bottom: -20px;
+
+    @media (max-width: 1500px) {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .col-7,
+        .col-5 {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+        .col-6 {
+            width: 100%;
+        }
+    }
+
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        border: 0;
+        color: #888888;
+        border-bottom: 1px solid #eee;
+        height: 56px;
+        padding-top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+
+        @media (max-width: 1500px) {
+            height: 35px;
+            padding-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            border: 1px solid #eee;
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 38px;
+        }
+    }
+
+    textarea {
+        height: 290px;
+        resize: none;
+        display: block;
+        padding-top: 20px;
+
+        @media (max-width: 1700px) {
+            height: 230px;
+        }
+
+        @media (max-width: 1500px) {
+            padding-top: 5px;
+            height: 175px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+
+        @media (max-width: 1700px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 1500px) {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 1000px) {
+            margin-bottom: 20px;
+        }
+
+        &.textarea-group {
+            margin-bottom: 40px;
+
+            @media (max-width: 1700px) {
+                margin-bottom: 20px;
+            }
+
+            @media (max-width: 1500px) {
+                margin-bottom: 15px;
+            }
+
+            @media (max-width: 1000px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &.button-group {
+            text-align: right;
+
+            .button {
+                max-width: 100%;
+            }
+
+            @media (max-width: 1500px) {
+                text-align: left;
+            }
+        }
+    }
+
+
+    .secure-code {
+        @include flex($alignI: flex-end);
+
+        img {
+            width: 128px;
+            margin-right: 30px;
+
+            @media (max-width: 600px) {
+                width: 90px;
+                margin-right: 10px;
+            }
+        }
+
+        input {
+            width: -webkit-calc(100% - 158px);
+            width: calc(100% - 158px);
+
+            @media (max-width: 600px) {
+                width: -webkit-calc(100% - 100px);
+                width: calc(100% - 100px);
+            }
+        }
+    }
+
+    &.blue .secure-code input {
+        color: $blue;
+    }
+}
