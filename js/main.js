@@ -155,6 +155,30 @@ jQuery(document).ready(function($) {
 
 
 
+    /*---------------------------
+                                  Select tabs
+    ---------------------------*/
+    $('.js-open-select').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $(this).parent().toggleClass('active');
+    });
+
+    $('.select-option').on('click', function(event) {
+        event.preventDefault();
+        $('.select-option').removeClass('active');
+        $(this).addClass('active');
+        $('.select-label-holder').text( $(this).text() );
+        $(this).parents('.select').removeClass('active');
+
+        var target = $(this).attr('href');
+        if ( exist(target) ) {
+            $('.tab').removeClass('active');
+            $(target).addClass('active');
+        }
+    });
+
+
 
     /*---------------------------
                                   Sliders
@@ -331,19 +355,37 @@ jQuery(document).ready(function($) {
     });
 
 
+    var coordinates = [];
+    $('.select-option').each(function(index, el) {
+        coordinates[index] = {
+            'lat': $(this).data('lat')*1,
+            'lng': $(this).data('lng')*1,
+        }
+    });
 
     /*Google map init*/
     var map;
     function googleMap_initialize() {
-        var lat = $('#map_canvas').data('lat');
-        var long = $('#map_canvas').data('lng');
+
+        if ( coordinates.length == 0 ) {
+            var lat = $('#map_canvas').data('lat');
+            var long = $('#map_canvas').data('lng');
+            var zoom = $('#map_canvas').data('zoom');
+            var marker_icon = $('#map_canvas').data('marker');    
+        } else {
+            var lat = coordinates[0].lat;
+            var long = coordinates[0].lng;
+            var zoom = 15;
+            var marker_icon = $('#map_canvas').data('marker');   
+        }
+
 
         var mapCenterCoord = new google.maps.LatLng(lat, long);
         var mapMarkerCoord = new google.maps.LatLng(lat, long);
 
         var mapOptions = {
             center: mapCenterCoord,
-            zoom: 17,
+            zoom: zoom,
             //draggable: false,
             disableDefaultUI: true,
             scrollwheel: false,
@@ -351,12 +393,60 @@ jQuery(document).ready(function($) {
         };
 
         map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-        var markerImage = new google.maps.MarkerImage('images/location.png');
-        var marker = new google.maps.Marker({
-            icon: markerImage,
-            position: mapMarkerCoord, 
-            map: map,
-            title:"Чисто Строй"
+
+        if ( coordinates.length == 0 ) {
+            var markerImage = new google.maps.MarkerImage(marker_icon);
+            var marker = new google.maps.Marker({
+                icon: markerImage,
+                position: mapMarkerCoord, 
+                map: map,
+                title:"Ceylan"
+            });
+        } else {
+            $.each(coordinates, function(index, el) {
+                console.log(coordinates[index].lat);
+                var markerImage = new google.maps.MarkerImage(marker_icon);
+                var marker = new google.maps.Marker({
+                    icon: markerImage,
+                    position: new google.maps.LatLng(coordinates[index].lat, coordinates[index].lng), 
+                    map: map,
+                    title:"Ceylan"
+                });
+            });
+        }
+
+        $('.js-set-map-coordinates').on('click', function(event) {
+            event.preventDefault();
+            mapCenterCoord = new google.maps.LatLng( $(this).data('lat')*1, $(this).data('lng')*1 );
+            console.log();
+            map.setCenter(mapCenterCoord);
+        });
+
+
+        $('.js-set-zoom-plus').on('click', function(event) {
+            event.preventDefault();
+            map.setZoom( map.getZoom() + 1 )
+        });
+
+        $('.js-set-zoom-minus').on('click', function(event) {
+            event.preventDefault();
+            map.setZoom( map.getZoom() - 1 )
+        });
+
+        $('.js-set-view-satellite').on('click', function(event) {
+            event.preventDefault();
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+        });
+
+        $('.js-set-view-roadmap').on('click', function(event) {
+            event.preventDefault();
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
         });
         
         $(window).resize(function (){

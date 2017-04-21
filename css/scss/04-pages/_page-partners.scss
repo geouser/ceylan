@@ -83,6 +83,42 @@
     padding: 20px 40px;
     margin-bottom: -20px;
 
+    &.has-header {
+        padding-top: 0;
+
+        .contact-form-header {
+            background-color: $green;
+            padding: 24px 40px 20px;
+            margin: 0 -40px 20px;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+
+            @media (max-width: 1500px) {
+                margin: 0 -20px 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            @media (max-width: 1000px) {
+                margin: 30px 0 20px 0;
+            }
+        }
+        
+        @media (min-width: 1501px) {
+            .form-group {
+                margin-bottom: 25px;
+            }
+
+            textarea {
+                height: 270px;
+            }    
+        }
+    }
+
+
+
     @media (max-width: 1500px) {
         padding-left: 20px;
         padding-right: 20px;
@@ -217,5 +253,8 @@
 
     &.blue .secure-code input {
         color: $blue;
+    }
+    &.green .secure-code input {
+        color: $green;
     }
 }
