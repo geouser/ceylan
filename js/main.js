@@ -181,6 +181,23 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  Affiliates map
+    ---------------------------*/
+    $('.marker').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('.marker').removeClass('active');
+        $(this).addClass('active');
+        
+        var target = $(this).attr('href');
+        if ( exist(target) ) {
+            $('.info-box').removeClass('active');
+            $(target).addClass('active');
+        }
+    });
+
+
+    /*---------------------------
                                   Sliders
     ---------------------------*/
     $('.products-logos').slick({
@@ -375,7 +392,7 @@ jQuery(document).ready(function($) {
         } else {
             var lat = coordinates[0].lat;
             var long = coordinates[0].lng;
-            var zoom = 15;
+            var zoom = $('#map_canvas').data('zoom');
             var marker_icon = $('#map_canvas').data('marker');   
         }
 
