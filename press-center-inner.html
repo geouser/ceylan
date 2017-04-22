@@ -121,20 +121,39 @@
                 <div class="col-3 aside">
                     <div class="aside-gallery">
                         <a 
-                            data-fancybox="press-center-gallery"
-                            href="images/aside-gallery-1.jpg"
-                            class="aside-gallery-item"
+                            href="#press-center-gallery"
+                            class="aside-gallery-item js-open-gallery"
+                            data-index="1"
                             style="background-image: url(images/aside-gallery-1.jpg);" ></a>
                         <a 
-                            data-fancybox="press-center-gallery"
-                            href="images/aside-gallery-1.jpg"
-                            class="aside-gallery-item"
+                            href="#press-center-gallery"
+                            class="aside-gallery-item js-open-gallery"
+                            data-index="2"
                             style="background-image: url(images/aside-gallery-2.jpg);" ></a>
 
-                        <a href="#press-center-gallery" class="open-gallery">
+                        <a href="#press-center-gallery" class="open-gallery js-open-gallery">
                             <span>Смотреть все</span>
                             <img src="images/read-more.svg" alt="">
                         </a>
+
+                        <div class="product-popup" id="press-center-gallery" style="background-image: url(images/slider-bg.jpg);">
+                            <button class="close-popup"></button>
+                            <div class="product-main-slider">
+                                <div class="slide"><img src="images/slider-1.png" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/620x500" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/1000x620" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/1600x1000" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/450x620" alt=""></div>
+                            </div>
+                            <div class="product-thumbnails-slider">
+                                <div class="slide"><img src="http://placehold.it/150x75" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/150x75" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/150x75" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/150x75" alt=""></div>
+                                <div class="slide"><img src="http://placehold.it/150x75" alt=""></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -142,7 +161,7 @@
 
         <hr class="devider">
 
-        <section class="inner">
+        <section class="inner has-gradient">
             <div class="flex-row articles-grid">
   
                 <div class="press-center-article">

@@ -281,6 +281,19 @@ jQuery(document).ready(function($) {
         } 
     });
 
+    $('.js-open-gallery').on('click', function(event) {
+        event.preventDefault();
+        var product_popup = $(this).attr('href');
+        var slick_index = $(this).data('index');
+        if (!slick_index) {
+            slick_index = 1;
+        }
+        if ( exist( product_popup ) ) {
+            $(product_popup).addClass('active');
+            $('.product-main-slider').slick('slickGoTo', slick_index-1, true)
+        } 
+    });
+
     $('.close-popup').on('click', function(event) {
         event.preventDefault();
         $('.product-popup').removeClass('active');
