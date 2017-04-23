@@ -132,6 +132,85 @@ jQuery(document).ready(function($) {
         $(target).fadeIn('slow');
     });
 
+    var logos =  function(el){
+        var children = el.children('a').length;
+        var active = 1;
+        $('.partners div').children('a').removeClass('active');
+        el.children('a:nth-of-type(' + active + ')').addClass('active');
+        if (active == children) {
+            active = 1;
+        }
+        else {
+            active++;
+        }
+    }
+
+    setTimeout(function(){ 
+        logos( $('.partners-list-1'));
+    }, 1000);
+    setTimeout(function(){ 
+        logos( $('.partners-list-2'));
+    }, 2000);
+    setTimeout(function(){ 
+        logos( $('.partners-list-3'));
+    }, 3000);
+    setTimeout(function(){ 
+        logos( $('.partners-list-4'));
+    }, 4000);
+    setTimeout(function(){ 
+        logos( $('.partners-list-5'));
+    }, 5000);
+    setTimeout(function(){ 
+        logos( $('.partners-list-6'));
+    }, 6000);
+    setTimeout(function(){ 
+        logos( $('.partners-list-7'));
+    }, 7000);
+    setTimeout(function(){ 
+        logos( $('.partners-list-8'));
+    }, 8000);
+
+    function fireLogo(el) {
+        var children = el.children('a').length;
+        var active = 1;
+        var logos = function(){
+            if (active == children || active > children) {
+                    active = 1;
+            }
+            else {
+                active++;
+            }
+            $('.partners div').children('a').removeClass('active');
+            el.children('a:nth-of-type(' + active + ')').addClass('active');
+        }
+        setInterval(logos, 8000);
+    }
+
+    var partnersLists = $('.partners').children('div').length;
+    var count = 1;
+
+    var startFunctions = setInterval( function(){
+        fireLogo( $('.partners-list-' + count + ''));
+        if (count == partnersLists) {
+            clearInterval(startFunctions);
+        }
+        count++;
+    }, 1000);
+
+
+    $('.partners-nav button').click(function(){
+        $('.partners > div').removeClass('accent');
+        var target = $(this).attr('href');
+        $(target).addClass('accent');
+        $('.partners > div').stop().animate({opacity:'0'},2000,function(){
+            $(this).animate({opacity:'1'},4000);
+        });
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 60
+        }, 800);
+        return false;
+    });
+
     /*---------------------------
                                   Fancybox
     ---------------------------*/
