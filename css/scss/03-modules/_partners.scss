@@ -157,6 +157,11 @@
             display: inline-block;
             vertical-align: middle;
         }
+        &:hover {
+            & + i {
+                opacity: 1;
+            }
+        }
         img {
             display: block;
             position: relative;
