@@ -1,5 +1,4 @@
 .button {
-    background-color: peru;
     min-width: 170px;
     height: 55px;
     line-height: 57px;
@@ -19,14 +18,33 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-
+    &.active,
+    &:hover {
+        background-color: #4ea7d5;
+    }
 
     &.green {
         background-color: $green;
+            &.active,
+            &:hover {
+                background-color: #53deac;
+            }
     }
 
     &.pink {
         background-color: $pink;
+        &.active,
+        &:hover {
+            background-color: #f48988;
+        }
+    }
+
+    &.current {
+        background-color: rgba(0,0,0,.6);
+        &.active,
+        &:hover {
+           background-color: $blue;
+        }
     }
 
 
@@ -34,10 +52,6 @@
         width: 160px;
         height: 50px;
         line-height: 53px;
-    }
-    &.active,
-    &:hover {
-        background: rgba(0,0,0,.5);
     }
 }
 
