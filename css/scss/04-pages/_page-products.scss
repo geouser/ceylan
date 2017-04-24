@@ -250,9 +250,8 @@
     border-right: 90px solid transparent;
     background-size: cover;
     background-repeat: no-repeat;
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
-    z-index: -10;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -276,7 +275,6 @@
     &.active {
         opacity: 1;
         visibility: visible;
-        z-index: 90;
     }
 
     &:before {
@@ -451,6 +449,7 @@
         -webkit-filter: grayscale(1);
         -o-filter: grayscale(1);
         filter: grayscale(1);
+        opacity: 0.427!important;
 
         @media (max-width: 1000px) {
             height: 40px;
@@ -460,6 +459,7 @@
             -webkit-filter: grayscale(0);
             -o-filter: grayscale(0);
             filter: grayscale(0);
+            opacity: 1!important;
         }
     }
 
