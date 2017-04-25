@@ -21,8 +21,7 @@
     <body>
 
 
-       
-        <!--=================================================================================================-->
+ <!--=================================================================================================-->
                                                     <!-- SIDEBAR -->
         <aside class="sidebar compensate-for-scrollbar">
             <a href="index.html" class="logo"><img src="images/logo.svg" alt=""></a>
@@ -36,8 +35,11 @@
                 <a href="#"><img src="images/search.svg" alt=""></a>
             </div>
             <ul class="languages">
-                <li class="active"><a href="">Русский</a></li>
-                <li><a href="">English</a></li>
+                <li><a href="">Русский</a></li>
+                <ul>
+                    <li><a href="">English</a></li>
+                    <li><a href="">Русский</a></li>
+                </ul>
             </ul>
         </aside>
 
@@ -53,6 +55,7 @@
                     <ul>
                         <li><a href="company.html">О компании</a>
                             <ul>
+                                <li><a href="regional-representatives.html">Региональные Представительства</a></li>
                                 <li><a href="">Пять принципов</a></li>
                                 <li><a href="history.html">История</a></li>
                             </ul>
@@ -62,10 +65,26 @@
                                 <li><a href="">Спектр услуг</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="products.html">Продукция</a></li>
-                        <li><a href="">Партнеры</a></li>
-                        <li><a href="">Пресс-центр</a></li>
-                        <li><a href="">Контакты</a></li>
+                        <li><a href="products.html">Продукция</a>
+                            <ul>
+                                <li><a href="">Лучшие Бренды</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="partners.html">Партнеры</a>
+                            <ul>
+                                <li><a href="">Бизнес-партнеры</a></li>
+                                <li><a href="">Клиенты</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="press-center.html">Пресс-центр</a>
+                            <ul>
+                                <li><a href="">Тренинги</a></li>
+                                <li><a href="">Досуг</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="contacts.html">Контакты</a>
+                            <li class="active"><a href="">Как связаться?</a></li>
+                        </li>
                     </ul>
                 </nav>
                 <div class="navigation-block__info__footer">
@@ -78,7 +97,7 @@
         <aside id="search" class="navigation-block navigation-block--search">
             <div class="navigation-block__img" style="background-image: url('images/search-bg.jpg')"></div>
             <div class="navigation-block__info">
-                <input type="text" name="name" value="Услуги компании" id="serch-input">
+                <input type="text" name="name" placeholder="Услуги компании" id="serch-input">
                 <span>Для поиска нажмите на "Enter"</span>
             </div>
         </aside>
