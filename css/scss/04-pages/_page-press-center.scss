@@ -45,6 +45,20 @@
     width: -webkit-calc(33.33% - 40px);
     width: calc(33.33% - 40px);
     position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+        .read-more-button {
+            -webkit-filter: grayscale(0);
+            -o-filter: grayscale(0);
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
 
     @media (max-width: 1500px) {
         padding-left: 10px;
@@ -168,12 +182,6 @@
                 display: block;
             }
         }
-
-        .read-more-button:hover {
-            -webkit-filter: grayscale(0);
-            -o-filter: grayscale(0);
-            filter: grayscale(0);
-            opacity: 1;
-        }
+      
     }
 }

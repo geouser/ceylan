@@ -87,7 +87,8 @@ if ( exist('.scroll') ) {
         } else {
             $('.scroll').mCustomScrollbar({
                 axis:"y",
-                theme: 'dark-thick'
+                theme: 'dark-thick',
+                mouseWheel:{ scrollAmount: 90 }
             });
         }
     });
@@ -229,6 +230,32 @@ jQuery(document).ready(function($) {
                 "effects": "fade scale(0.1) translateZ(-100px)"
             }
         });
+
+
+        $('.flow-background').css( 'width', $('.filter-button').first().outerWidth() );
+
+        $('.filter-button').on('click', function(event) {
+            event.preventDefault();
+            var el_left = $(this).position().left;
+            var el_width = $(this).outerWidth();
+
+            $('.flow-background').css({
+                left: el_left,
+                width: el_width
+            });
+        }); 
+
+        $(window).on('resize', function(event) {
+            event.preventDefault();
+
+            var el_left = $('.filter-button.mixitup-control-active').position().left;
+            var el_width = $('.filter-button.mixitup-control-active').outerWidth();
+
+            $('.flow-background').css({
+                left: el_left,
+                width: el_width
+            });
+        });
     }
 
 
@@ -262,9 +289,11 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   Affiliates map
     ---------------------------*/
+    var timeout;
     $('.marker').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
+        var this_marker = $(this);
         $('.marker').removeClass('active');
         $(this).addClass('active');
         
@@ -273,7 +302,16 @@ jQuery(document).ready(function($) {
             $('.info-box').removeClass('active');
             $(target).addClass('active');
         }
+        clearTimeout(timeout);
+        timeout = setTimeout(function(){ 
+            if ( this_marker.next().length > 0 ) {
+                this_marker.next().click();
+            } else {
+                $('.marker').first().click();
+            }
+        }, 5000);
     });
+    $('.marker').first().click();
 
 
     /*---------------------------
@@ -410,6 +448,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         re_height();
         $('.product-thumbnails-slider').slick('setPosition');
+        $('.product-main-slider').slick('setPosition');
     });
     
 
