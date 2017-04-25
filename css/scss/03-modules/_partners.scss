@@ -6,6 +6,10 @@
     @media (max-width: 760px) {
         display: block;
         padding: 10px;
+        column-count: 2;
+        -webkit-column-gap: 20px;
+           -moz-column-gap: 20px;
+                column-gap: 20px;
     }
     button {
         cursor: pointer;
@@ -21,6 +25,7 @@
         @media (max-width: 760px) {
             display: block;
             font-size: 12px;
+            text-align: left;
         }
         i {
             display: inline-block;
@@ -54,6 +59,9 @@
         span {
             display: inline-block;
             vertical-align: middle;
+            @media (max-width: 760px) {
+                display: inline;
+            }
         }
     }
 }
@@ -250,6 +258,11 @@
                     margin: auto;
                     width: 14px;
                     height: 14px;
+                    opacity: 1!important;
+                    -webkit-animation: none !important;
+                       -moz-animation: none !important;
+                         -o-animation: none !important;
+                            animation: none !important;
                 }
             }
         }

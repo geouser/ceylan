@@ -16,6 +16,10 @@
             height: auto;
             min-height: 0;
         }
+        @media (max-width: 700px) {
+            padding-bottom: 0;
+            padding-top: 140px;
+        }
     }
     &__controls {
         margin-top: 45px;
@@ -67,6 +71,18 @@
             width: 450px;
             max-width: 100%;
         }
+        @media (max-width: 700px) {
+            font-size: 14px;
+        }
+        h1 {
+            color: #ff6766;
+            font-size: 26px;
+            font-weight: 500;
+            text-transform: none;
+            @media (max-width: 700px) {
+                font-size: 22px;
+            }
+        }
         &__text {
             padding: 0 55px;
             @media (max-width: 1500px) {
@@ -103,8 +119,10 @@
         }
         .logo {
             padding-left: 55px;
+            max-width: 50%;
             img {
                 width: 220px;
+                max-width: 100%;
             }
             @media (max-width: 1500px) {
                 padding-left: 40px;
@@ -112,6 +130,7 @@
             }
             @media (max-width: 1000px) {
                 padding: 0;
+                padding-left: 20px;
                 margin-bottom: 10px;
             }
         }
@@ -141,7 +160,8 @@
     left: 0;
     top: 0;
     background: #3D8EB9;
-
+    @media (max-width: 700px) {
+    }
     .slick-track,
     .slick-list {
         height: 100%;

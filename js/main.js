@@ -107,6 +107,7 @@ jQuery(document).ready(function($) {
 
     });
 
+    var placeholder = '';
     $('#seacrh-toggle a').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('open');
@@ -114,14 +115,13 @@ jQuery(document).ready(function($) {
         $('#menu').removeClass('open');
         $('#menu-toggle').removeClass('open');
         $('#search').toggleClass('open');
-
-        $('#serch-input').focus();
-        var val = $('#serch-input').val();
-        $('#serch-input').val('');
-        $('#serch-input').val(val);
-
+        if ($('#search').hasClass('open')) {
+            placeholder = $('#serch-input').attr('placeholder');
+            setTimeout(function(){ $('#serch-input').attr('placeholder', ''); $('#serch-input').focus(); }, 1500);
+        } else {
+            $('#serch-input').attr('placeholder', placeholder)
+        }
     });
-
 
     $('.tabs-nav a').click(function(e){
         e.preventDefault();
@@ -132,18 +132,6 @@ jQuery(document).ready(function($) {
         $(target).fadeIn('slow');
     });
 
-    var logos =  function(el){
-        var children = el.children('a').length;
-        var active = 1;
-        $('.partners div').children('a').removeClass('active');
-        el.children('a:nth-of-type(' + active + ')').addClass('active');
-        if (active == children) {
-            active = 1;
-        }
-        else {
-            active++;
-        }
-    }
 
     function fireLogo(el) {
         var children = el.children('a').length;
@@ -176,6 +164,26 @@ jQuery(document).ready(function($) {
             scrollTop: $(target).offset().top - 60
         }, 800);
         return false;
+    });
+
+
+    if ($(window).width() < 1001) {
+        $('.languages > li > a').click(function(event){
+            event.preventDefault();
+        });
+         $('.languages').click(function(){
+            $(this).toggleClass('opened');
+         });
+      }
+    $(window).resize(function() {
+      if ($(window).width() < 1001) {
+        $('.languages > li > a').click(function(event){
+            event.preventDefault();
+        });
+         $('.languages').click(function(){
+            $(this).toggleClass('opened');
+         });
+      }
     });
 
     /*---------------------------
@@ -294,21 +302,7 @@ jQuery(document).ready(function($) {
           asNavFor: '.offer__slider',
           dots: false,
           arrows: true,
-          focusOnSelect: true,
-          responsive: [
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 3,
-              }
-            },
-            {
-              breakpoint: 400,
-              settings: {
-                slidesToShow: 2,
-              }
-            }
-          ]
+          focusOnSelect: true
     });
 
 
