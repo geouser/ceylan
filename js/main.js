@@ -284,7 +284,7 @@ jQuery(document).ready(function($) {
             } else {
                 $('.marker').first().click();
             }
-        }, 5000);
+        }, 3500);
     });
     $('.marker').first().click();
 

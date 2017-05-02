@@ -98,6 +98,10 @@
                 -ms-transform: translate(-50%, -50%);
                 -o-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
+                animation-name: pulse;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+                animation-fill-mode: both;
             }
 
             .label {
@@ -331,4 +335,19 @@
             }
         }
     }
+}
+
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+  }
+
+  to {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 }
